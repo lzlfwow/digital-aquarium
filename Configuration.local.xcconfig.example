@@ -1,0 +1,4 @@
+// Copy to Configuration.local.xcconfig and fill in your own signing settings.
+// Use the same prefix and App Group for the App and Widget targets.
+STILLWATER_BUNDLE_PREFIX = com.yourname.stillwater
+DEVELOPMENT_TEAM =

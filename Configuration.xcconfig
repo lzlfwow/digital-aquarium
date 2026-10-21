@@ -1,0 +1,11 @@
+// Shared defaults. Keep personal signing settings in the optional local file.
+STILLWATER_BUNDLE_PREFIX = com.example.stillwater
+STILLWATER_APP_GROUP = group.$(STILLWATER_BUNDLE_PREFIX).shared
+DEVELOPMENT_TEAM =
+IPHONEOS_DEPLOYMENT_TARGET = 17.0
+SWIFT_VERSION = 5.0
+TARGETED_DEVICE_FAMILY = 1,2
+CODE_SIGN_STYLE = Automatic
+ENABLE_USER_SCRIPT_SANDBOXING = YES
+
+#include? "Configuration.local.xcconfig"

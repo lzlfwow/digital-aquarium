@@ -1,0 +1,85 @@
+{
+  "schema": 1,
+  "files": [
+    {
+      "file": "style.css",
+      "bytes": 15719,
+      "sha256": "7573f6c087c0a03e733185eaa8a2905a2b97850ef2cf5be93d4e9fcda781265d"
+    },
+    {
+      "file": "aquarium.js",
+      "bytes": 5933,
+      "sha256": "787209db634b85fb0dbe87e707ac9dc6ec79ed2626b33980eab1f6ab91b6f529"
+    },
+    {
+      "file": "management.js",
+      "bytes": 13314,
+      "sha256": "52b0b647557d24f83f008312418239592d3496c5ff051d8f8696dc674e6f4d19"
+    },
+    {
+      "file": "management-ui.js",
+      "bytes": 13500,
+      "sha256": "6deb5542cf76940bad98c8b37a5a25bc26bb9a0d2d181255bc6818ffdb90f23f"
+    },
+    {
+      "file": "sound.js",
+      "bytes": 2944,
+      "sha256": "534317cc3e37fce15e9817323d75ae1acd59656f10d77c8ad89db7981eca7dbd"
+    },
+    {
+      "file": "app.js",
+      "bytes": 10636,
+      "sha256": "4704983320c80f8d7a9555341317cb8adcb1c9e514b8b8d8dc829faf64800eb3"
+    },
+    {
+      "file": "scene.js",
+      "bytes": 658794,
+      "sha256": "1fa82a82505cae3ad3173b25c68155081cc4d80c0cfa6c102152a3216a9f5ae1"
+    },
+    {
+      "file": "assets/stillwater-serif.ttf",
+      "bytes": 142432,
+      "sha256": "3756ce5e515c917da3692897b604917e7b10d94668ac028ea46fe88785138196"
+    },
+    {
+      "file": "assets/after-rain.mp3",
+      "bytes": 1153138,
+      "sha256": "0a466559243283775fac30f13318af870ef99ec514b4357a59e53d3e974c96ba"
+    },
+    {
+      "file": "assets/OFL.txt",
+      "bytes": 4350,
+      "sha256": "5e0da210fb04058a8c0087985d2d456b931c2579811a49655721d3cf0c36b6d6"
+    },
+    {
+      "file": "assets/THREE-LICENSE.txt",
+      "bytes": 1081,
+      "sha256": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc"
+    },
+    {
+      "file": "assets/MUSIC.txt",
+      "bytes": 787,
+      "sha256": "74219c4c4472a4b5a7a395d8c131733ec6423a9275d1441709029b7a3105754e"
+    },
+    {
+      "file": "assets/apple-touch-icon.png",
+      "bytes": 16601,
+      "sha256": "71c7f28dbb09b3b44127bdba4d16bc0ec8be79dab6365159b37f787b1e898fae"
+    },
+    {
+      "file": "index.html",
+      "bytes": 7862,
+      "sha256": "1bdc4f01388b190aaa0511eab534dc57d2a1cf9bab59f7075c02a9e889b4aba7"
+    },
+    {
+      "file": "native-bridge.js",
+      "bytes": 3518,
+      "sha256": "fbdd59c73a36a5f14c410d99bfca0cc4cad01b8bb562a13b2de518b85a762a92"
+    },
+    {
+      "file": "native-ui.js",
+      "bytes": 1777,
+      "sha256": "9a1a2700b9cf380b986871f9bff492a42d4d63208a5d57ac95a0d36c6cddc75a"
+    }
+  ]
+}

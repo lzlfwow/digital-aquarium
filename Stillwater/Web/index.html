@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="apple-touch-icon" href="./assets/apple-touch-icon.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="一缸微光">
+  <meta name="theme-color" content="#c3dce2">
+  <meta name="description" content="一缸微光。看小鱼游过，让时间慢一点。一个安静的水族箱。">
+  <title>一缸微光 · Stillwater</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='10' fill='%231c4745'/%3E%3Cpath d='M7 16C13 6 23 12 25 16C21 23 13 24 7 16M7 16L3 11V21Z' fill='%23e6c698'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="./style.css">
+  <script defer src="./aquarium.js"></script>
+  <script defer src="./management.js"></script>
+  <script defer src="./scene.js"></script>
+  <script defer src="./management-ui.js"></script>
+  <script defer src="./sound.js"></script>
+  <script defer src="./native-bridge.js"></script>
+  <script defer src="./app.js"></script>
+  <script defer src="./native-ui.js"></script>
+</head>
+<body>
+  <main class="aquarium" aria-label="一缸微光，安静的互动水族箱">
+    <canvas id="water" tabindex="0" aria-label="水族箱：在上方水面点击投食，或停留片刻等小鱼靠近。拖动旋转视角，滚轮缩放。键盘按 F 在中央投食。"></canvas>
+    <div class="grain" aria-hidden="true"></div>
+    <header class="masthead">
+      <a class="wordmark" href="./" aria-label="一缸微光首页">
+        <svg viewBox="0 0 40 40" fill="none" aria-hidden="true"><path d="M5 20c7-10 20-10 29 0-9 10-22 10-29 0Z"/><path d="m7 20-5-6v12l5-6ZM17 12c1-4 4-5 7-4M17 28c1 4 4 5 7 4"/><circle cx="28" cy="19" r="1" fill="currentColor" stroke="none"/></svg>
+        <span>一缸微光<small>STILLWATER</small></span>
+      </a>
+      <div class="header-note"><button id="portable-toggle" type="button">随身鱼缸</button><label class="quality-control">画质 <select id="quality-select" aria-label="画质选择"><option value="auto">自动</option><option value="low">轻省</option><option value="medium">均衡</option><option value="high">细腻</option></select></label><span class="weather-note"><span class="live-dot"></span>雨过，天晴</span></div>
+    </header>
+    <nav class="garden-bar" aria-label="水族箱管理">
+      <div class="wallet"><span class="coin-symbol" aria-hidden="true">✧</span><strong id="coins">0</strong><span>微光币</span></div>
+      <span id="capacity" class="capacity">2 / 6 尾</span>
+      <button type="button" data-panel="shop">商店</button>
+      <button type="button" data-panel="fish">鱼册</button>
+      <button type="button" data-panel="decor">布置</button>
+    </nav>
+    <p id="nursery-note" class="nursery-note"></p>
+    <p id="save-warning" class="save-warning" role="alert" hidden></p>
+    <aside id="garden-panel" class="garden-panel" role="dialog" aria-labelledby="panel-title" hidden>
+      <div class="panel-heading"><div><span class="eyebrow">A LITTLE WORLD TO KEEP</span><h2 id="panel-title">水边商店</h2></div><button type="button" id="panel-close" aria-label="关闭面板">×</button></div>
+      <p id="panel-copy" class="panel-copy"></p>
+      <nav id="shop-tabs" class="shop-tabs" aria-label="商品类别"></nav>
+      <div id="panel-content" class="panel-content"></div>
+      <p class="panel-footnote">只在相伴时生长 · 进度自动保存在当前浏览器</p>
+    </aside>
+    <div id="edit-bar" class="edit-bar" hidden>
+      <div><strong id="edit-title">布置鱼缸</strong><small id="edit-hint">选择物品，放在底砂上</small></div>
+      <button type="button" id="rotate-decor" title="R 旋转">旋转 ↻</button>
+      <button type="button" id="place-decor">放下</button>
+      <button type="button" id="retrieve-decor">收回</button>
+      <button type="button" id="cancel-decor">取消</button>
+      <button type="button" id="finish-decor">完成</button>
+    </div>
+    <p id="garden-toast" class="garden-toast" role="status" aria-live="polite" hidden></p>
+    <div class="waterline-label" aria-hidden="true"><span></span>轻点缸内水面 · 喂一小口<span></span></div>
+    <section class="intro" aria-label="欢迎">
+      <p class="eyebrow">AFTER THE RAIN, A LITTLE LIGHT.</p>
+      <h1>雨停了，光落进水里。</h1>
+      <p class="intro-copy">看一会儿鱼，让时间慢下来。</p>
+    </section>
+    <div class="view-controls"><span>拖动环看 · 滚轮靠近</span><button id="view-reset" type="button">视角归位</button></div>
+    <p id="render-error" class="render-error" role="alert" hidden></p>
+    <footer class="bottom-bar">
+      <div class="scene-caption"><span class="caption-line"></span><div>晴间 · 01<small>AQUARIUM / AFTER RAIN</small></div></div>
+      <div class="sound-panel">
+        <button id="sound-toggle" type="button" aria-pressed="false" aria-label="开启音乐">
+          <svg class="sound-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 10v4h4l5 4V6l-5 4H4Z"/><path class="waves" d="M16 9a5 5 0 0 1 0 6m3-9a9 9 0 0 1 0 12"/><path class="mute-stroke" d="m17 10 4 4m0-4-4 4"/></svg>
+          <span id="sound-label">开启音乐</span>
+        </button>
+        <span class="control-divider"></span>
+        <label class="volume-label" for="volume">音量</label>
+        <input id="volume" type="range" min="0" max="100" value="35" aria-label="音乐音量">
+      </div>
+      <button class="help-toggle" id="help-toggle" type="button" aria-expanded="false" aria-controls="help">如何相处 <span>?</span></button>
+    </footer>
+    <div id="help" class="help" hidden>
+      <p>轻点鱼缸内的水面，留下一小撮食物。</p>
+      <p>把指针停在水里，也许会有小鱼来看看。</p>
+      <p>拖动可以看看侧面，滚轮可以靠近一点。</p>
+      <p>同种成鱼两条会自动繁殖；首窝只需相伴 30 秒。</p>
+      <p>在鱼册出售幼鱼，用微光币买鱼、换缸和布置。</p>
+      <p>幼鱼 10 分钟长大；离开页面时成长暂停。</p>
+      <p>布置时左键摆放，右键环看；R 旋转，方向键微调。</p>
+      <small>键盘：聚焦水景后按 F 投食 · Esc 收起说明</small>
+    </div>
+    <dialog id="portable-panel" aria-labelledby="portable-title">
+      <div class="panel-heading"><h2 id="portable-title">把这一缸光带走</h2><button id="portable-close" type="button" aria-label="关闭随身鱼缸">×</button></div>
+      <p id="offline-status" role="status">正在准备离线内容…</p>
+      <p>养鱼、画面和音乐都在你的设备上运行。离线准备完成后，不联网也能玩。</p>
+      <p id="install-help"></p>
+      <div class="portable-actions"><button id="install-app" type="button">添加到桌面</button><button id="check-offline" type="button">检查离线与更新</button><button id="update-app" type="button" hidden>保存并更新</button></div>
+      <hr>
+      <h3>留住你的鱼缸</h3>
+      <p>进度只保存在当前浏览器。换网址、换设备或清理浏览器前，请导出存档备份。浏览器也可能因空间不足清理离线内容。</p>
+      <div class="portable-actions"><button id="export-save" type="button">导出存档</button><button id="import-save" type="button">导入存档</button><input id="save-file" type="file" accept=".json,application/json" hidden></div>
+      <p id="portable-note" role="status" aria-live="polite"></p>
+    </dialog>
+    <p id="status" class="sr-only" role="status" aria-live="polite"></p>
+    <noscript><p class="no-script">请开启 JavaScript，让这缸小鱼游起来。</p></noscript>
+  </main>
+</body>
+</html>

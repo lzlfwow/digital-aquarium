@@ -1,0 +1,636 @@
+// !$*UTF8*$!
+{
+	"archiveVersion" = 1;
+	"classes" = {
+	};
+	"objectVersion" = 56;
+	"objects" = {
+		"4E475637B0A8FD15369B74C7" = {
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "text.xcconfig";
+			"path" = "Configuration.xcconfig";
+			"sourceTree" = "<group>";
+		};
+		"F17C58C8B2C234A6E1D2F913" = {
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "sourcecode.swift";
+			"path" = "Stillwater/StillwaterApp.swift";
+			"sourceTree" = "<group>";
+		};
+		"8A19EB2B7D61E9C3810E7FB8" = {
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "sourcecode.swift";
+			"path" = "Stillwater/AquariumController.swift";
+			"sourceTree" = "<group>";
+		};
+		"DDD2A575903406621628655A" = {
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "sourcecode.swift";
+			"path" = "Shared/AquariumStore.swift";
+			"sourceTree" = "<group>";
+		};
+		"7FE121D6883D2E44DE637DFC" = {
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "sourcecode.swift";
+			"path" = "StillwaterWidget/StillwaterWidget.swift";
+			"sourceTree" = "<group>";
+		};
+		"822426B56BE30A05CFCEDBED" = {
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "sourcecode.swift";
+			"path" = "StillwaterTests/AquariumStoreTests.swift";
+			"sourceTree" = "<group>";
+		};
+		"877D57B4B200925E8EC9836C" = {
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "folder";
+			"path" = "Stillwater/Web";
+			"sourceTree" = "<group>";
+		};
+		"617DD23C75D78E6EF9D6832A" = {
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "folder.assetcatalog";
+			"path" = "Stillwater/Assets.xcassets";
+			"sourceTree" = "<group>";
+		};
+		"66256648137FBBCBAADF0EA4" = {
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "folder.assetcatalog";
+			"path" = "StillwaterWidget/Assets.xcassets";
+			"sourceTree" = "<group>";
+		};
+		"8875B088BB381085E9B87226" = {
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "text.xml";
+			"path" = "Stillwater/PrivacyInfo.xcprivacy";
+			"sourceTree" = "<group>";
+		};
+		"90FAF41BD1A08181B0402C69" = {
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "text.xml";
+			"path" = "StillwaterWidget/PrivacyInfo.xcprivacy";
+			"sourceTree" = "<group>";
+		};
+		"02BBF39AAD0392AC269F1CF2" = {
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "text.plist.xml";
+			"path" = "Stillwater/Info.plist";
+			"sourceTree" = "<group>";
+		};
+		"24549F385E0A6EC588F63215" = {
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "text.plist.xml";
+			"path" = "Stillwater/Stillwater.entitlements";
+			"sourceTree" = "<group>";
+		};
+		"6275F39AB44DEF7FA28094C6" = {
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "text.plist.xml";
+			"path" = "StillwaterWidget/Info.plist";
+			"sourceTree" = "<group>";
+		};
+		"5773C8798BEA0EAB9778BBE6" = {
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "text.plist.xml";
+			"path" = "StillwaterWidget/Stillwater.entitlements";
+			"sourceTree" = "<group>";
+		};
+		"B6CDB6E5D160E013280D3C68" = {
+			"isa" = "PBXFileReference";
+			"explicitFileType" = "wrapper.application";
+			"includeInIndex" = 0;
+			"path" = "Stillwater.app";
+			"sourceTree" = "BUILT_PRODUCTS_DIR";
+		};
+		"4C47665D1BA4105DF9684DC4" = {
+			"isa" = "PBXFileReference";
+			"explicitFileType" = "wrapper.app-extension";
+			"includeInIndex" = 0;
+			"path" = "StillwaterWidget.appex";
+			"sourceTree" = "BUILT_PRODUCTS_DIR";
+		};
+		"E02A90D9643568EA39115CFB" = {
+			"isa" = "PBXFileReference";
+			"explicitFileType" = "wrapper.cfbundle";
+			"includeInIndex" = 0;
+			"path" = "StillwaterTests.xctest";
+			"sourceTree" = "BUILT_PRODUCTS_DIR";
+		};
+		"FBDC4F23F93125BBEEAE800C" = {
+			"isa" = "PBXGroup";
+			"children" = (
+				"B6CDB6E5D160E013280D3C68",
+				"4C47665D1BA4105DF9684DC4",
+				"E02A90D9643568EA39115CFB",
+			);
+			"name" = "Products";
+			"sourceTree" = "<group>";
+		};
+		"B28B7AF69320201D1CF206EB" = {
+			"isa" = "PBXGroup";
+			"children" = (
+				"4E475637B0A8FD15369B74C7",
+				"F17C58C8B2C234A6E1D2F913",
+				"8A19EB2B7D61E9C3810E7FB8",
+				"DDD2A575903406621628655A",
+				"7FE121D6883D2E44DE637DFC",
+				"822426B56BE30A05CFCEDBED",
+				"877D57B4B200925E8EC9836C",
+				"617DD23C75D78E6EF9D6832A",
+				"66256648137FBBCBAADF0EA4",
+				"8875B088BB381085E9B87226",
+				"90FAF41BD1A08181B0402C69",
+				"02BBF39AAD0392AC269F1CF2",
+				"24549F385E0A6EC588F63215",
+				"6275F39AB44DEF7FA28094C6",
+				"5773C8798BEA0EAB9778BBE6",
+				"FBDC4F23F93125BBEEAE800C",
+			);
+			"sourceTree" = "<group>";
+		};
+		"5632E9FDC70F2DC0B2D4E983" = {
+			"isa" = "PBXContainerItemProxy";
+			"containerPortal" = "98F54143AB4E86B28C3AFEE0";
+			"proxyType" = 1;
+			"remoteGlobalIDString" = "FF700E0204CA58FE8CBBF19A";
+			"remoteInfo" = "StillwaterWidget";
+		};
+		"4DA75641BEA61A776F463463" = {
+			"isa" = "PBXTargetDependency";
+			"target" = "FF700E0204CA58FE8CBBF19A";
+			"targetProxy" = "5632E9FDC70F2DC0B2D4E983";
+		};
+		"BE0BE3FC9C988569259691B3" = {
+			"isa" = "PBXContainerItemProxy";
+			"containerPortal" = "98F54143AB4E86B28C3AFEE0";
+			"proxyType" = 1;
+			"remoteGlobalIDString" = "7D1043473D55BFA90E8530D3";
+			"remoteInfo" = "Stillwater";
+		};
+		"6887967124D497C64F8E1C7A" = {
+			"isa" = "PBXTargetDependency";
+			"target" = "7D1043473D55BFA90E8530D3";
+			"targetProxy" = "BE0BE3FC9C988569259691B3";
+		};
+		"B14A56041A214163BE5795A3" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "F17C58C8B2C234A6E1D2F913";
+		};
+		"C575A69AAE77F8C1F47F0BE5" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "8A19EB2B7D61E9C3810E7FB8";
+		};
+		"C7E48D2B8A52AA36ABE6129C" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "DDD2A575903406621628655A";
+		};
+		"971ED9D05B25DB6C4D7680D4" = {
+			"isa" = "PBXSourcesBuildPhase";
+			"buildActionMask" = 2147483647;
+			"files" = (
+				"B14A56041A214163BE5795A3",
+				"C575A69AAE77F8C1F47F0BE5",
+				"C7E48D2B8A52AA36ABE6129C",
+			);
+			"runOnlyForDeploymentPostprocessing" = 0;
+		};
+		"78AE8C6BEB2A40A6D824CCEE" = {
+			"isa" = "PBXFrameworksBuildPhase";
+			"buildActionMask" = 2147483647;
+			"files" = (
+			);
+			"runOnlyForDeploymentPostprocessing" = 0;
+		};
+		"652E887A513E422241FE9953" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "877D57B4B200925E8EC9836C";
+		};
+		"368153067DDC97E23FFD84E9" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "617DD23C75D78E6EF9D6832A";
+		};
+		"1FB8EF94F36F10D776B79EE7" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "8875B088BB381085E9B87226";
+		};
+		"364863F9F2E558B0F50473FC" = {
+			"isa" = "PBXResourcesBuildPhase";
+			"buildActionMask" = 2147483647;
+			"files" = (
+				"652E887A513E422241FE9953",
+				"368153067DDC97E23FFD84E9",
+				"1FB8EF94F36F10D776B79EE7",
+			);
+			"runOnlyForDeploymentPostprocessing" = 0;
+		};
+		"0B075EF90E99EF3F01220D88" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "4C47665D1BA4105DF9684DC4";
+			"settings" = {
+				"ATTRIBUTES" = (
+					"RemoveHeadersOnCopy",
+				);
+			};
+		};
+		"CFFF27C96089B93150F3553B" = {
+			"isa" = "PBXCopyFilesBuildPhase";
+			"buildActionMask" = 2147483647;
+			"files" = (
+				"0B075EF90E99EF3F01220D88",
+			);
+			"runOnlyForDeploymentPostprocessing" = 0;
+			"dstPath" = "";
+			"dstSubfolderSpec" = 13;
+			"name" = "Embed App Extensions";
+		};
+		"D52B2703E97A1BF10111F347" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "DDD2A575903406621628655A";
+		};
+		"55DAB883E9A769B3ADB7D010" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "7FE121D6883D2E44DE637DFC";
+		};
+		"2D81737A052BBAAD15A6D3C1" = {
+			"isa" = "PBXSourcesBuildPhase";
+			"buildActionMask" = 2147483647;
+			"files" = (
+				"D52B2703E97A1BF10111F347",
+				"55DAB883E9A769B3ADB7D010",
+			);
+			"runOnlyForDeploymentPostprocessing" = 0;
+		};
+		"7683A40AB86681224A5404DF" = {
+			"isa" = "PBXFrameworksBuildPhase";
+			"buildActionMask" = 2147483647;
+			"files" = (
+			);
+			"runOnlyForDeploymentPostprocessing" = 0;
+		};
+		"7C9550CDA4AC38D9CEE53943" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "66256648137FBBCBAADF0EA4";
+		};
+		"EC2512730634A77D1E2C66AF" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "90FAF41BD1A08181B0402C69";
+		};
+		"FE608D3A8638F8175D740C08" = {
+			"isa" = "PBXResourcesBuildPhase";
+			"buildActionMask" = 2147483647;
+			"files" = (
+				"7C9550CDA4AC38D9CEE53943",
+				"EC2512730634A77D1E2C66AF",
+			);
+			"runOnlyForDeploymentPostprocessing" = 0;
+		};
+		"6F65BC2FE9EEDA82F0D00253" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "822426B56BE30A05CFCEDBED";
+		};
+		"6E431EB0650617AA1756B320" = {
+			"isa" = "PBXSourcesBuildPhase";
+			"buildActionMask" = 2147483647;
+			"files" = (
+				"6F65BC2FE9EEDA82F0D00253",
+			);
+			"runOnlyForDeploymentPostprocessing" = 0;
+		};
+		"1ABF84E55BD30AC2CEF8FC42" = {
+			"isa" = "PBXFrameworksBuildPhase";
+			"buildActionMask" = 2147483647;
+			"files" = (
+			);
+			"runOnlyForDeploymentPostprocessing" = 0;
+		};
+		"7DED7670B79BEA8B7480B1FC" = {
+			"isa" = "PBXResourcesBuildPhase";
+			"buildActionMask" = 2147483647;
+			"files" = (
+			);
+			"runOnlyForDeploymentPostprocessing" = 0;
+		};
+		"E9B2E96ABC5F6856F2BE79CF" = {
+			"isa" = "XCBuildConfiguration";
+			"baseConfigurationReference" = "4E475637B0A8FD15369B74C7";
+			"buildSettings" = {
+				"SDKROOT" = "iphoneos";
+				"SUPPORTED_PLATFORMS" = "iphoneos iphonesimulator";
+				"CLANG_ENABLE_MODULES" = "YES";
+				"SWIFT_EMIT_LOC_STRINGS" = "YES";
+				"GENERATE_INFOPLIST_FILE" = "NO";
+				"LD_RUNPATH_SEARCH_PATHS" = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				"SUPPORTS_MACCATALYST" = "NO";
+				"PRODUCT_NAME" = "Stillwater";
+				"PRODUCT_MODULE_NAME" = "Stillwater";
+				"PRODUCT_BUNDLE_IDENTIFIER" = "$(STILLWATER_BUNDLE_PREFIX)";
+				"INFOPLIST_FILE" = "Stillwater/Info.plist";
+				"CODE_SIGN_ENTITLEMENTS" = "Stillwater/Stillwater.entitlements";
+				"ASSETCATALOG_COMPILER_APPICON_NAME" = "AppIcon";
+				"SWIFT_OPTIMIZATION_LEVEL" = "-Onone";
+				"DEBUG_INFORMATION_FORMAT" = "dwarf";
+				"SWIFT_ACTIVE_COMPILATION_CONDITIONS" = "DEBUG";
+				"ENABLE_TESTABILITY" = "YES";
+				"ONLY_ACTIVE_ARCH" = "YES";
+			};
+			"name" = "Debug";
+		};
+		"5A8C91857F674E16E2724F47" = {
+			"isa" = "XCBuildConfiguration";
+			"baseConfigurationReference" = "4E475637B0A8FD15369B74C7";
+			"buildSettings" = {
+				"SDKROOT" = "iphoneos";
+				"SUPPORTED_PLATFORMS" = "iphoneos iphonesimulator";
+				"CLANG_ENABLE_MODULES" = "YES";
+				"SWIFT_EMIT_LOC_STRINGS" = "YES";
+				"GENERATE_INFOPLIST_FILE" = "NO";
+				"LD_RUNPATH_SEARCH_PATHS" = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				"SUPPORTS_MACCATALYST" = "NO";
+				"PRODUCT_NAME" = "Stillwater";
+				"PRODUCT_MODULE_NAME" = "Stillwater";
+				"PRODUCT_BUNDLE_IDENTIFIER" = "$(STILLWATER_BUNDLE_PREFIX)";
+				"INFOPLIST_FILE" = "Stillwater/Info.plist";
+				"CODE_SIGN_ENTITLEMENTS" = "Stillwater/Stillwater.entitlements";
+				"ASSETCATALOG_COMPILER_APPICON_NAME" = "AppIcon";
+				"SWIFT_OPTIMIZATION_LEVEL" = "-O";
+				"DEBUG_INFORMATION_FORMAT" = "dwarf-with-dsym";
+			};
+			"name" = "Release";
+		};
+		"F37922C48DA5978D02C9E50E" = {
+			"isa" = "XCConfigurationList";
+			"buildConfigurations" = (
+				"E9B2E96ABC5F6856F2BE79CF",
+				"5A8C91857F674E16E2724F47",
+			);
+			"defaultConfigurationIsVisible" = 0;
+			"defaultConfigurationName" = "Release";
+		};
+		"7D1043473D55BFA90E8530D3" = {
+			"isa" = "PBXNativeTarget";
+			"buildConfigurationList" = "F37922C48DA5978D02C9E50E";
+			"buildPhases" = (
+				"971ED9D05B25DB6C4D7680D4",
+				"78AE8C6BEB2A40A6D824CCEE",
+				"364863F9F2E558B0F50473FC",
+				"CFFF27C96089B93150F3553B",
+			);
+			"buildRules" = (
+			);
+			"dependencies" = (
+				"4DA75641BEA61A776F463463",
+			);
+			"name" = "Stillwater";
+			"productName" = "Stillwater";
+			"productReference" = "B6CDB6E5D160E013280D3C68";
+			"productType" = "com.apple.product-type.application";
+		};
+		"8EEBAB68363C2B0DAE00DB30" = {
+			"isa" = "XCBuildConfiguration";
+			"baseConfigurationReference" = "4E475637B0A8FD15369B74C7";
+			"buildSettings" = {
+				"SDKROOT" = "iphoneos";
+				"SUPPORTED_PLATFORMS" = "iphoneos iphonesimulator";
+				"CLANG_ENABLE_MODULES" = "YES";
+				"SWIFT_EMIT_LOC_STRINGS" = "YES";
+				"GENERATE_INFOPLIST_FILE" = "NO";
+				"LD_RUNPATH_SEARCH_PATHS" = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				"SUPPORTS_MACCATALYST" = "NO";
+				"PRODUCT_NAME" = "StillwaterWidget";
+				"PRODUCT_BUNDLE_IDENTIFIER" = "$(STILLWATER_BUNDLE_PREFIX).widgets";
+				"INFOPLIST_FILE" = "StillwaterWidget/Info.plist";
+				"CODE_SIGN_ENTITLEMENTS" = "StillwaterWidget/Stillwater.entitlements";
+				"APPLICATION_EXTENSION_API_ONLY" = "YES";
+				"SKIP_INSTALL" = "YES";
+				"SWIFT_OPTIMIZATION_LEVEL" = "-Onone";
+				"DEBUG_INFORMATION_FORMAT" = "dwarf";
+				"SWIFT_ACTIVE_COMPILATION_CONDITIONS" = "DEBUG";
+				"ENABLE_TESTABILITY" = "YES";
+				"ONLY_ACTIVE_ARCH" = "YES";
+			};
+			"name" = "Debug";
+		};
+		"9B3B545F8CBA1ACB550689D3" = {
+			"isa" = "XCBuildConfiguration";
+			"baseConfigurationReference" = "4E475637B0A8FD15369B74C7";
+			"buildSettings" = {
+				"SDKROOT" = "iphoneos";
+				"SUPPORTED_PLATFORMS" = "iphoneos iphonesimulator";
+				"CLANG_ENABLE_MODULES" = "YES";
+				"SWIFT_EMIT_LOC_STRINGS" = "YES";
+				"GENERATE_INFOPLIST_FILE" = "NO";
+				"LD_RUNPATH_SEARCH_PATHS" = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				"SUPPORTS_MACCATALYST" = "NO";
+				"PRODUCT_NAME" = "StillwaterWidget";
+				"PRODUCT_BUNDLE_IDENTIFIER" = "$(STILLWATER_BUNDLE_PREFIX).widgets";
+				"INFOPLIST_FILE" = "StillwaterWidget/Info.plist";
+				"CODE_SIGN_ENTITLEMENTS" = "StillwaterWidget/Stillwater.entitlements";
+				"APPLICATION_EXTENSION_API_ONLY" = "YES";
+				"SKIP_INSTALL" = "YES";
+				"SWIFT_OPTIMIZATION_LEVEL" = "-O";
+				"DEBUG_INFORMATION_FORMAT" = "dwarf-with-dsym";
+			};
+			"name" = "Release";
+		};
+		"9ED0E5B5BC01E6B082EFBF74" = {
+			"isa" = "XCConfigurationList";
+			"buildConfigurations" = (
+				"8EEBAB68363C2B0DAE00DB30",
+				"9B3B545F8CBA1ACB550689D3",
+			);
+			"defaultConfigurationIsVisible" = 0;
+			"defaultConfigurationName" = "Release";
+		};
+		"FF700E0204CA58FE8CBBF19A" = {
+			"isa" = "PBXNativeTarget";
+			"buildConfigurationList" = "9ED0E5B5BC01E6B082EFBF74";
+			"buildPhases" = (
+				"2D81737A052BBAAD15A6D3C1",
+				"7683A40AB86681224A5404DF",
+				"FE608D3A8638F8175D740C08",
+			);
+			"buildRules" = (
+			);
+			"dependencies" = (
+			);
+			"name" = "StillwaterWidget";
+			"productName" = "StillwaterWidget";
+			"productReference" = "4C47665D1BA4105DF9684DC4";
+			"productType" = "com.apple.product-type.app-extension";
+		};
+		"0F3D67935A4F199E058A017A" = {
+			"isa" = "XCBuildConfiguration";
+			"baseConfigurationReference" = "4E475637B0A8FD15369B74C7";
+			"buildSettings" = {
+				"SDKROOT" = "iphoneos";
+				"SUPPORTED_PLATFORMS" = "iphoneos iphonesimulator";
+				"CLANG_ENABLE_MODULES" = "YES";
+				"SWIFT_EMIT_LOC_STRINGS" = "YES";
+				"GENERATE_INFOPLIST_FILE" = "YES";
+				"LD_RUNPATH_SEARCH_PATHS" = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				"SUPPORTS_MACCATALYST" = "NO";
+				"PRODUCT_NAME" = "StillwaterTests";
+				"PRODUCT_BUNDLE_IDENTIFIER" = "$(STILLWATER_BUNDLE_PREFIX).tests";
+				"TEST_HOST" = "$(BUILT_PRODUCTS_DIR)/Stillwater.app/Stillwater";
+				"BUNDLE_LOADER" = "$(TEST_HOST)";
+				"SWIFT_OPTIMIZATION_LEVEL" = "-Onone";
+				"DEBUG_INFORMATION_FORMAT" = "dwarf";
+				"SWIFT_ACTIVE_COMPILATION_CONDITIONS" = "DEBUG";
+				"ENABLE_TESTABILITY" = "YES";
+				"ONLY_ACTIVE_ARCH" = "YES";
+			};
+			"name" = "Debug";
+		};
+		"20B70E15FDC36C625E57F658" = {
+			"isa" = "XCBuildConfiguration";
+			"baseConfigurationReference" = "4E475637B0A8FD15369B74C7";
+			"buildSettings" = {
+				"SDKROOT" = "iphoneos";
+				"SUPPORTED_PLATFORMS" = "iphoneos iphonesimulator";
+				"CLANG_ENABLE_MODULES" = "YES";
+				"SWIFT_EMIT_LOC_STRINGS" = "YES";
+				"GENERATE_INFOPLIST_FILE" = "YES";
+				"LD_RUNPATH_SEARCH_PATHS" = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				"SUPPORTS_MACCATALYST" = "NO";
+				"PRODUCT_NAME" = "StillwaterTests";
+				"PRODUCT_BUNDLE_IDENTIFIER" = "$(STILLWATER_BUNDLE_PREFIX).tests";
+				"TEST_HOST" = "$(BUILT_PRODUCTS_DIR)/Stillwater.app/Stillwater";
+				"BUNDLE_LOADER" = "$(TEST_HOST)";
+				"SWIFT_OPTIMIZATION_LEVEL" = "-O";
+				"DEBUG_INFORMATION_FORMAT" = "dwarf-with-dsym";
+			};
+			"name" = "Release";
+		};
+		"61AF5D6BEA2D148C6F2833BF" = {
+			"isa" = "XCConfigurationList";
+			"buildConfigurations" = (
+				"0F3D67935A4F199E058A017A",
+				"20B70E15FDC36C625E57F658",
+			);
+			"defaultConfigurationIsVisible" = 0;
+			"defaultConfigurationName" = "Release";
+		};
+		"04D13FD0AA6F0197CF2C9990" = {
+			"isa" = "PBXNativeTarget";
+			"buildConfigurationList" = "61AF5D6BEA2D148C6F2833BF";
+			"buildPhases" = (
+				"6E431EB0650617AA1756B320",
+				"1ABF84E55BD30AC2CEF8FC42",
+				"7DED7670B79BEA8B7480B1FC",
+			);
+			"buildRules" = (
+			);
+			"dependencies" = (
+				"6887967124D497C64F8E1C7A",
+			);
+			"name" = "StillwaterTests";
+			"productName" = "StillwaterTests";
+			"productReference" = "E02A90D9643568EA39115CFB";
+			"productType" = "com.apple.product-type.bundle.unit-test";
+		};
+		"89E1FD6268CC0F221A2BE178" = {
+			"isa" = "XCBuildConfiguration";
+			"baseConfigurationReference" = "4E475637B0A8FD15369B74C7";
+			"buildSettings" = {
+				"CLANG_ENABLE_MODULES" = "YES";
+				"CLANG_ENABLE_OBJC_ARC" = "YES";
+				"ENABLE_STRICT_OBJC_MSGSEND" = "YES";
+				"SWIFT_OPTIMIZATION_LEVEL" = "-Onone";
+				"DEBUG_INFORMATION_FORMAT" = "dwarf";
+				"SWIFT_ACTIVE_COMPILATION_CONDITIONS" = "DEBUG";
+				"ENABLE_TESTABILITY" = "YES";
+				"ONLY_ACTIVE_ARCH" = "YES";
+			};
+			"name" = "Debug";
+		};
+		"E6DE6C99132752C914FEF632" = {
+			"isa" = "XCBuildConfiguration";
+			"baseConfigurationReference" = "4E475637B0A8FD15369B74C7";
+			"buildSettings" = {
+				"CLANG_ENABLE_MODULES" = "YES";
+				"CLANG_ENABLE_OBJC_ARC" = "YES";
+				"ENABLE_STRICT_OBJC_MSGSEND" = "YES";
+				"SWIFT_OPTIMIZATION_LEVEL" = "-O";
+				"DEBUG_INFORMATION_FORMAT" = "dwarf-with-dsym";
+			};
+			"name" = "Release";
+		};
+		"862894B703A6DEDF96A9DD6C" = {
+			"isa" = "XCConfigurationList";
+			"buildConfigurations" = (
+				"89E1FD6268CC0F221A2BE178",
+				"E6DE6C99132752C914FEF632",
+			);
+			"defaultConfigurationIsVisible" = 0;
+			"defaultConfigurationName" = "Release";
+		};
+		"98F54143AB4E86B28C3AFEE0" = {
+			"isa" = "PBXProject";
+			"attributes" = {
+				"BuildIndependentTargetsInParallel" = "YES";
+				"LastUpgradeCheck" = "1600";
+				"TargetAttributes" = {
+					"7D1043473D55BFA90E8530D3" = {
+						"CreatedOnToolsVersion" = "16.0";
+						"SystemCapabilities" = {
+							"com.apple.ApplicationGroups.iOS" = {
+								"enabled" = 1;
+							};
+						};
+					};
+					"FF700E0204CA58FE8CBBF19A" = {
+						"CreatedOnToolsVersion" = "16.0";
+						"SystemCapabilities" = {
+							"com.apple.ApplicationGroups.iOS" = {
+								"enabled" = 1;
+							};
+						};
+					};
+					"04D13FD0AA6F0197CF2C9990" = {
+						"CreatedOnToolsVersion" = "16.0";
+						"TestTargetID" = "7D1043473D55BFA90E8530D3";
+					};
+				};
+			};
+			"buildConfigurationList" = "862894B703A6DEDF96A9DD6C";
+			"compatibilityVersion" = "Xcode 14.0";
+			"developmentRegion" = "zh_CN";
+			"hasScannedForEncodings" = 0;
+			"knownRegions" = (
+				"zh_CN",
+				"en",
+				"Base",
+			);
+			"mainGroup" = "B28B7AF69320201D1CF206EB";
+			"productRefGroup" = "FBDC4F23F93125BBEEAE800C";
+			"projectDirPath" = "";
+			"projectRoot" = "";
+			"targets" = (
+				"7D1043473D55BFA90E8530D3",
+				"FF700E0204CA58FE8CBBF19A",
+				"04D13FD0AA6F0197CF2C9990",
+			);
+		};
+	};
+	"rootObject" = "98F54143AB4E86B28C3AFEE0";
+}
