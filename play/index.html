@@ -109,14 +109,15 @@
       try{
         const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),90000);
         try{
-          const response=await fetch(url+(attempt?'?retry='+Date.now():''),{signal:controller.signal});
+          const compressed=url.includes('scene.') && 'DecompressionStream' in window;
+          const response=await fetch(url+(compressed?'.gz':'')+(attempt?'?retry='+Date.now():''),{signal:controller.signal});
           if(!response.ok)throw Error('HTTP '+response.status);
           const reader=response.body?.getReader();let source;
           if(reader){
-            const decoder=new TextDecoder();let bytes=0;source='';
-            for(;;){const {done,value}=await reader.read();if(done)break;bytes+=value.length;source+=decoder.decode(value,{stream:true});message(label+' · 已下载 '+Math.round(bytes/1024)+' KB'+(attempt?' · 重试 '+attempt+'/2':''));}
-            source+=decoder.decode();
-          }else source=await response.text();
+            const decoder=new TextDecoder();let bytes=0;source='';const chunks=[];
+            for(;;){const {done,value}=await reader.read();if(done)break;bytes+=value.length;if(compressed)chunks.push(value);else source+=decoder.decode(value,{stream:true});message(label+' · 已下载 '+Math.round(bytes/1024)+' KB'+(attempt?' · 重试 '+attempt+'/2':''));}
+            if(compressed){const blob=new Blob(chunks);const header=new Uint8Array(await blob.slice(0,2).arrayBuffer());source=header[0]===31&&header[1]===139?await new Response(blob.stream().pipeThrough(new DecompressionStream('gzip'))).text():await blob.text();}else source+=decoder.decode();
+          }else {if(compressed){const blob=await response.blob();source=await new Response(blob.stream().pipeThrough(new DecompressionStream('gzip'))).text();}else source=await response.text();}
           const script=document.createElement('script');script.textContent=source;document.head.append(script);script.remove();
         }finally{clearTimeout(timer);}
         return;
