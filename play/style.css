@@ -122,3 +122,5 @@ html[data-quality=low] .garden-panel{background:#edf3ecfa}
 .portable-actions button{border:1px solid #c0d1c5;border-radius:7px;padding:10px 13px;background:#dce8dd;color:#3b6256;font-size:12px;min-height:40px}
 #portable-note{color:#607d72;min-height:1em}
 @media(max-width:600px){#portable-toggle{margin-right:8px;padding:7px;font-size:10px;letter-spacing:0}#portable-panel{padding:20px}.header-note{gap:0}}
+/* Shop/album art comes from the approved 3D models, not generic fish symbols. */
+.item-art.fish img{display:block;width:100%;height:100%;object-fit:contain;mix-blend-mode:multiply}

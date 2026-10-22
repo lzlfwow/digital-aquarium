@@ -7,11 +7,7 @@
   const button = (action,id,label,disabled=false) => `<button type="button" data-action="${action}" data-id="${id}" ${disabled?'disabled':''}>${label}</button>`;
   function art(type,key){
     const frame=content=>`<svg viewBox="0 0 120 80" aria-hidden="true">${content}</svg>`;
-    if(type==='fish'){
-      const colors={qing:['#4b7a7f','#adcac1'],silver:['#88a4ab','#e5eee7'],gold:['#aa8850','#e2c794']}[key];
-      const h=key==='gold'?17:key==='silver'?14:11;
-      return frame(`<path d="M33 40 16 25 21 40 16 55Z" fill="${colors[0]}" opacity=".7"/><ellipse cx="63" cy="40" rx="34" ry="${h}" fill="${colors[1]}"/><path d="M30 40Q60 ${40-h*2} 96 40Q63 ${40-h} 30 40" fill="${colors[0]}"/><path d="M51 29 59 17 75 29M53 46 45 58 66 48" fill="${colors[0]}" opacity=".65"/><circle cx="85" cy="37" r="1.6" fill="#304c50"/>`);
-    }
+    if(type==='fish') return `<img src="./assets/fish/${key}.png" alt="${SPECIES[key].name}的实际模型" loading="lazy">`;
     if(type==='tanks'){
       const x=key==='wide'?9:22,y=key==='tall'?7:18,w=key==='wide'?102:76,h=key==='tall'?64:50;
       return frame(`<path d="M${x} ${y}h${w}v${h}H${x}Z" fill="#c6ded8" fill-opacity=".5" stroke="#8ba9a6"/><path d="M${x} ${y+10}h${w}v${h-10}H${x}Z" fill="#7faba5" fill-opacity=".18"/><path d="M${x} ${y+h-5}h${w}" stroke="#b3bca5" stroke-width="8"/><path d="M${x} ${y}l9-6h${w-18}l9 6" fill="none" stroke="#aec2bb"/>`);

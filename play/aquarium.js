@@ -112,7 +112,8 @@
         f.heading += clamp(angle, -dt*.65, dt*.65);
         const base=f.state==='feed' ? CONFIG.feedingSpeed :
           f.state==='observe' ? CONFIG.observationSpeed : CONFIG.cruiseSpeed;
-        const speed=base*clamp(d/.065,.08,1)*(1-.55*Math.abs(angle)/Math.PI);
+        const speciesSpeed=root.StillwaterGarden?.SPECIES[f.species]?.swimSpeed ?? 1;
+        const speed=base*speciesSpeed*clamp(d/.065,.08,1)*(1-.55*Math.abs(angle)/Math.PI);
         f.speed += (speed-f.speed)*Math.min(1,dt*1.4);
         f.x=clamp(f.x+Math.cos(f.heading)*f.speed*dt,.09,.91);
         f.y=clamp(f.y+Math.sin(f.heading)*f.speed*dt/ .72,.15,.81);

@@ -2,9 +2,12 @@
 (function (root) {
   'use strict';
   const SPECIES = Object.freeze({
-    qing: { name: '青背鱼', price: 60, sell: 20, variant: 1, note: '青绿背脊 · 修长鱼身' },
-    silver: { name: '银鳍鱼', price: 100, sell: 35, variant: 0, note: '银白侧腹 · 宽展短鳍' },
-    gold: { name: '金背鱼', price: 180, sell: 60, variant: 2, note: '暖金背脊 · 圆润鱼身' },
+    qing: { name: '青鳉', price: 60, sell: 20, swimSpeed: 1.00, note: '针梭长身 · 小圆扇尾 · 平稳巡游' },
+    silver: { name: '斑马鱼', price: 100, sell: 35, swimSpeed: 1.10, note: '饱满纺锤 · 蓝灰条纹 · 稍显轻快' },
+    gold: { name: '金丝鱼', price: 180, sell: 60, swimSpeed: 1.04, note: '轻巧短梭 · 挺立背鳍 · 灵巧游动' },
+    guppy: { name: '孔雀鱼', price: 140, sell: 45, swimSpeed: 1.07, note: '小身宽尾 · 柔薄裙摆 · 轻盈巡游' },
+    angel: { name: '神仙鱼', price: 220, sell: 70, swimSpeed: 0.90, note: '侧扁高身 · 上下帆鳍 · 舒缓滑行' },
+    fancy: { name: '彗星金鱼', price: 200, sell: 65, swimSpeed: 0.95, note: '厚实前身 · 飘逸长尾 · 从容游动' },
   });
   const TANKS = Object.freeze({
     basic: { name: '晴间玻璃缸', price: 0, capacity: 6, scale: [1, 1, 1], note: '初见的晴光，小小的陪伴' },

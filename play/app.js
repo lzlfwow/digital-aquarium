@@ -191,6 +191,7 @@
   if(new URLSearchParams(location.search).has('debug')){
     window.stillwaterDebug={
       advance:seconds=>{advanceEconomy(seconds);gardenUI.refresh(true);},
+      widgetSnapshots:()=>scene.widgetSnapshots(),
       floorScreen:(x,z)=>scene.floorScreen(x,z),
       screen:(x,y)=>scene.screen(x,y),
       surfaceScreen:(x,z)=>scene.surfaceScreen(x,z),
