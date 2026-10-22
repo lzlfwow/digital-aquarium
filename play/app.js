@@ -18,6 +18,7 @@
     const message=document.querySelector('#render-error');
     message.hidden=false;
     message.textContent='无法开启 3D 画面。请开启浏览器硬件加速，或换用支持 WebGL 2 的浏览器。';
+    window.stillwaterBootFailure?.(error);
     console.error(error);
     return;
   }
@@ -54,6 +55,7 @@
   function coordinates(event){return scene.local(event.clientX,event.clientY);}
   function resize(){
     scene.resize();scene.render(model,ambientTime,reducedMotion);
+    if(!window.stillwaterDidRender){window.stillwaterDidRender=true;dispatchEvent(new Event('stillwater-ready'));}
     const surface=scene.surfaceScreen(.5);
     document.querySelector('.waterline-label').style.top=`${surface.y-22}px`;
     document.querySelector('.waterline-label').style.left=`${surface.x}px`;
@@ -145,6 +147,7 @@
     for(let remaining=dt;remaining>0;remaining-=.05)model.update(Math.min(.05,remaining));
     ambientTime+=dt*(reducedMotion?.4:1);
     scene.render(model,ambientTime,reducedMotion);
+    if(!window.stillwaterDidRender){window.stillwaterDidRender=true;dispatchEvent(new Event('stillwater-ready'));}
   }
   let nativeActive=true;
   function updateActivity(){
