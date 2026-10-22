@@ -1,0 +1,13 @@
+After Rain / 晴光轻奏
+Original procedural composition created for Stillwater, 2026-10-20.
+
+96-second instrumental loop, 60 BPM. Soft felt-keyboard-like notes, widely spaced
+melody, gentle major/add9 harmony and a low ambient pad with diffuse reverb.
+No third-party recording, sampled instrument, copyrighted melody, noise bed or
+external music service is used. No external music attribution is required.
+
+Source: scripts/compose_music.py (numpy + ffmpeg, creation time only).
+Delivery: after-rain.mp3, 32 kHz stereo, 96 kbit/s, ~1.1 MB. Loaded only after a
+user starts playback. HTML media streaming avoids a full decoded music buffer
+and continuous runtime synthesizer work. Music starts muted and pauses when
+this page is hidden; its clock does not depend on rendering frame rate.
