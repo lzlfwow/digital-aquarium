@@ -12,5 +12,5 @@
   $('import-save').onclick=()=>$('save-file').click();
   $('save-file').onchange=async e=>{const file=e.target.files[0];e.target.value='';if(!file)return;try{if(file.size>2*1024*1024)throw Error('文件过大');const save=window.StillwaterGarden.Garden.validate(JSON.parse(await file.text()));if(!confirm(`导入 ${save.fish.length} 尾鱼、${save.coins} 微光币？将替换当前鱼缸，建议先导出备份。`))return;const detail={save,ok:false};window.dispatchEvent(new CustomEvent('stillwater-import',{detail}));if(!detail.ok)throw Error('写入失败');note.textContent='已导入鱼缸。';}catch{note.textContent='无法导入，原有进度没有改变。请检查文件格式与浏览器存储权限。';}};
   const share=document.createElement('button');share.textContent='分享试玩';share.type='button';$('export-save').parentElement.append(share);
-  share.onclick=async()=>{const url=new URL('../',location.href).href;try{if(navigator.share)await navigator.share({title:'一缸微光 · 网页试玩',text:'给忙碌留一小缸晴光。网页版暂不含 iOS 小组件。',url});else{await navigator.clipboard.writeText(url);note.textContent='试玩链接已复制。';}}catch(e){if(e.name!=='AbortError')note.textContent='试玩链接：'+url;}};
+  share.onclick=async()=>{const url=new URL('../',document.baseURI).href;try{if(navigator.share)await navigator.share({title:'一缸微光 · 网页试玩',text:'给忙碌留一小缸晴光。网页版暂不含 iOS 小组件。',url});else{await navigator.clipboard.writeText(url);note.textContent='试玩链接已复制。';}}catch(e){if(e.name!=='AbortError')note.textContent='试玩链接：'+url;}};
 })();
