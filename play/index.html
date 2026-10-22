@@ -119,9 +119,7 @@
           }else source=await response.text();
           const script=document.createElement('script');script.textContent=source;document.head.append(script);script.remove();
         }finally{clearTimeout(timer);}
-        return;finished=true;clearTimeout(timer);script.onload=script.onerror=null;if(error){script.remove();reject(error);}else resolve();}
-          script.src=url+(attempt?'?retry='+Date.now():'');script.onload=()=>done();script.onerror=()=>done(new Error('资源下载失败'));document.head.append(script);
-        });return;
+        return;
       }catch(error){if(attempt===2)throw error;}
     }
   }
